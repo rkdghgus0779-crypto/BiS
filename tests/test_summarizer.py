@@ -18,7 +18,43 @@ class SummarizerTests(unittest.TestCase):
     def test_summarize_note_ignores_markdown_headings(self):
         note = "# Example Note\n\n## Topic\n\nBiology uses data. Python helps analysis."
 
-        self.assertEqual(summarize_note(note, max_sentences=1), "Biology uses data.")
+        self.assertEqual(summarize_note(note, max_sentences=2), "Topic. Biology uses data.")
+
+    def test_summarize_note_handles_markdown_lists_and_code_blocks(self):
+        note = """
+# Fibrosis note
+
+## Immune response
+
+- Macrophages signal to fibroblasts.
+* TGF-beta can support extracellular matrix remodeling.
+1. Single-cell RNA-seq can separate cell populations.
+- [x] Quality control matters before interpretation.
+
+```python
+print("This code should not appear in the summary.")
+```
+"""
+
+        self.assertEqual(
+            summarize_note(note, max_sentences=4),
+            (
+                "Immune response. Macrophages signal to fibroblasts. "
+                "TGF-beta can support extracellular matrix remodeling. "
+                "Single-cell RNA-seq can separate cell populations."
+            ),
+        )
+
+    def test_summarize_note_cleans_blockquotes_links_and_inline_code(self):
+        note = (
+            "> Read the [PBMC tutorial](https://example.com). "
+            "`AnnData` stores matrices and metadata."
+        )
+
+        self.assertEqual(
+            summarize_note(note, max_sentences=2),
+            "Read the PBMC tutorial. AnnData stores matrices and metadata.",
+        )
 
     def test_summarize_note_rejects_invalid_sentence_count(self):
         with self.assertRaises(ValueError):

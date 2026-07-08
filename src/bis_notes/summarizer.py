@@ -31,12 +31,34 @@ DEFAULT_KEYWORDS = (
 
 def _plain_text(note: str) -> str:
     lines = []
+    in_code_block = False
     for line in note.splitlines():
         stripped = line.strip()
-        if not stripped or stripped.startswith("#"):
+
+        if stripped.startswith("```") or stripped.startswith("~~~"):
+            in_code_block = not in_code_block
             continue
-        if stripped.startswith(("- ", "* ")):
+
+        if in_code_block or not stripped:
+            continue
+
+        heading = re.match(r"^(#{1,6})\s+(.+)$", stripped)
+        if heading:
+            level, heading_text = heading.groups()
+            if len(level) == 1:
+                continue
+            stripped = heading_text.strip()
+            if stripped and stripped[-1] not in ".!?":
+                stripped = f"{stripped}."
+
+        stripped = re.sub(r"^[-*+]\s+\[[ xX]\]\s+", "", stripped)
+        if stripped.startswith(("- ", "* ", "+ ")):
             stripped = stripped[2:].strip()
+        stripped = re.sub(r"^\d+[.)]\s+", "", stripped)
+        stripped = re.sub(r"^>\s*", "", stripped)
+        stripped = re.sub(r"`([^`]+)`", r"\1", stripped)
+        stripped = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", stripped)
+
         lines.append(stripped)
     return " ".join(lines)
 

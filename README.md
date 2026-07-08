@@ -130,6 +130,7 @@ BiS is starting to collect beginner-friendly materials that connect biology conc
 * [Single-cell RNA-seq Starter Reading Guide](docs/single_cell_starter.md)
 * [Fibrosis and Immune Response Case Study Outline](docs/fibrosis_case_study.md)
 * [Fibrosis and Immune Response Study Note](examples/fibrosis_immune_response_note.md)
+* [Public Dataset Tutorial Plan](docs/public_dataset_tutorial_plan.md)
 
 ## Areas of Interest
 
@@ -151,7 +152,7 @@ BiS is starting to collect beginner-friendly materials that connect biology conc
 * Expand the single-cell RNA-seq reading and tutorial track
 * Expand the fibrosis and immune response learning track
 * Publish a small documentation site with tutorials
-* Add notebooks using public scientific datasets
+* Add notebooks using public scientific datasets, starting from the PBMC 3k tutorial plan
 * Improve the CLI for note organization and keyword extraction
 * Invite first-time contributors through labeled beginner issues
 
