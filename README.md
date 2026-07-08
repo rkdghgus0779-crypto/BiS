@@ -122,6 +122,15 @@ BiS is organized around a few learning tracks:
 
 See [docs/research_focus.md](docs/research_focus.md), [docs/project_ideas.md](docs/project_ideas.md), and [docs/open_source_growth.md](docs/open_source_growth.md) for the current direction.
 
+## Learning Materials
+
+BiS is starting to collect beginner-friendly materials that connect biology concepts with computational thinking:
+
+* [Beginner Bioinformatics Glossary](docs/bioinformatics_glossary.md)
+* [Single-cell RNA-seq Starter Reading Guide](docs/single_cell_rna_seq_starter.md)
+* [Fibrosis and Immune Response Case Study Outline](docs/fibrosis_immune_response_case_study.md)
+* [Fibrosis and Immune Response Study Note](examples/fibrosis_immune_response_note.md)
+
 ## Areas of Interest
 
 * Bio and Brain Engineering
@@ -139,8 +148,8 @@ See [docs/research_focus.md](docs/research_focus.md), [docs/project_ideas.md](do
 
 * Add more example notes related to biology, neuroscience, and bioinformatics
 * Add beginner-friendly examples for biological data analysis
-* Add a small single-cell RNA-seq reading and tutorial track
-* Add a fibrosis and immune response learning track
+* Expand the single-cell RNA-seq reading and tutorial track
+* Expand the fibrosis and immune response learning track
 * Publish a small documentation site with tutorials
 * Add notebooks using public scientific datasets
 * Improve the CLI for note organization and keyword extraction
