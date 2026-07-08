@@ -126,9 +126,9 @@ See [docs/research_focus.md](docs/research_focus.md), [docs/project_ideas.md](do
 
 BiS is starting to collect beginner-friendly materials that connect biology concepts with computational thinking:
 
-* [Beginner Bioinformatics Glossary](docs/bioinformatics_glossary.md)
-* [Single-cell RNA-seq Starter Reading Guide](docs/single_cell_rna_seq_starter.md)
-* [Fibrosis and Immune Response Case Study Outline](docs/fibrosis_immune_response_case_study.md)
+* [Beginner Bioinformatics Glossary](docs/glossary.md)
+* [Single-cell RNA-seq Starter Reading Guide](docs/single_cell_starter.md)
+* [Fibrosis and Immune Response Case Study Outline](docs/fibrosis_case_study.md)
 * [Fibrosis and Immune Response Study Note](examples/fibrosis_immune_response_note.md)
 
 ## Areas of Interest

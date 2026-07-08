@@ -68,6 +68,14 @@ Bulk RNA-seq measures gene expression from a mixture of many cells. It gives an 
 
 A count matrix stores gene expression counts. Rows often represent genes, columns often represent cells or samples, and each value represents how many reads or molecules were detected.
 
+### AnnData
+
+AnnData is a common data structure used in Python single-cell analysis. It usually stores a data matrix, cell metadata, gene metadata, and analysis results in one object.
+
+### `.h5ad`
+
+`.h5ad` is a common file format for saving AnnData objects. Many single-cell tutorials use `.h5ad` files to share processed datasets.
+
 ### Differential Expression
 
 Differential expression analysis looks for genes that have different expression levels between groups, such as disease versus control or one cell type versus another.
@@ -97,6 +105,32 @@ A marker gene is a gene commonly associated with a cell type or cell state. Mark
 ### Cell Type Annotation
 
 Cell type annotation assigns biological labels to clusters or cells. It usually combines marker genes, reference datasets, and domain knowledge.
+
+## Fibrosis and Immune Response Terms
+
+### Fibrosis
+
+Fibrosis is excessive tissue repair that can lead to abnormal extracellular matrix accumulation and tissue stiffness.
+
+### Fibroblast
+
+A fibroblast is a stromal cell involved in producing and remodeling extracellular matrix. Fibroblasts are important in wound healing and fibrosis.
+
+### Myofibroblast
+
+A myofibroblast is an activated fibroblast-like state often associated with contraction, tissue remodeling, and extracellular matrix production.
+
+### Macrophage
+
+A macrophage is an immune cell involved in inflammation, cleanup, repair, and signaling to other cells. Macrophages can influence fibroblast activation in fibrosis-related contexts.
+
+### Extracellular Matrix
+
+Extracellular matrix is the network of proteins and molecules surrounding cells. It provides structure to tissues and can accumulate abnormally in fibrosis.
+
+### TGF-beta
+
+TGF-beta is a signaling molecule often discussed in fibrosis because it can promote fibroblast activation and extracellular matrix production.
 
 ## Interpretation Terms
 
@@ -133,4 +167,3 @@ When learning bioinformatics, try to connect each technical step to a biological
 - What does each feature mean biologically?
 - What assumptions does the method make?
 - What would count as a strong or weak interpretation?
-

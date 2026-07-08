@@ -34,7 +34,13 @@ Cell metadata stores information about each cell, such as sample ID, condition, 
 
 Metadata matters because biological interpretation often depends on comparing groups.
 
-### 3. Quality Control
+### 3. AnnData and `.h5ad`
+
+AnnData is a common Python object for single-cell analysis. It can store the expression matrix, cell metadata, gene metadata, and analysis results together.
+
+`.h5ad` is a common file format used to save AnnData objects. Many public single-cell tutorials use `.h5ad` files because they keep the data matrix and annotations in one reusable file.
+
+### 4. Quality Control
 
 Quality control removes cells or genes that may be technically unreliable. Common checks include total counts, number of detected genes, and mitochondrial gene percentage.
 
@@ -43,7 +49,7 @@ Biological meaning:
 - A low-quality cell may look different because it was damaged, not because it represents a meaningful cell state.
 - Filtering choices can affect downstream conclusions.
 
-### 4. Normalization
+### 5. Normalization
 
 Normalization makes cells more comparable by adjusting for technical differences such as sequencing depth.
 
@@ -51,7 +57,7 @@ Biological meaning:
 
 - Without normalization, highly sequenced cells can appear more active simply because more RNA was measured.
 
-### 5. Highly Variable Genes
+### 6. Highly Variable Genes
 
 Highly variable genes are genes that show strong differences across cells. They are often used to focus the analysis on informative signals.
 
@@ -59,7 +65,7 @@ Biological meaning:
 
 - Variable genes may reflect cell identity, activation, stress, cell cycle, or technical effects.
 
-### 6. Dimensionality Reduction
+### 7. Dimensionality Reduction
 
 Methods such as PCA and UMAP help summarize high-dimensional gene expression into fewer dimensions.
 
@@ -68,7 +74,7 @@ Biological meaning:
 - Nearby points may represent cells with similar expression profiles.
 - A UMAP plot is a visualization, not proof of a biological mechanism.
 
-### 7. Clustering
+### 8. Clustering
 
 Clustering groups cells with similar expression patterns.
 
@@ -77,7 +83,7 @@ Biological meaning:
 - A cluster may represent a cell type, a cell state, a technical artifact, or a mixture.
 - Clusters need biological annotation.
 
-### 8. Marker Genes
+### 9. Marker Genes
 
 Marker genes help identify cell types or states.
 
@@ -86,7 +92,7 @@ Biological meaning:
 - Marker genes are clues, not automatic labels.
 - Good annotation combines multiple markers and biological context.
 
-### 9. Differential Expression
+### 10. Differential Expression
 
 Differential expression compares gene expression between groups.
 
@@ -144,4 +150,3 @@ See [Beginner Bioinformatics Glossary](bioinformatics_glossary.md) for short def
 ## Current Status
 
 This guide is a starter reading track. Future BiS work may add a small public dataset tutorial using common Python tools such as pandas, Scanpy, or AnnData.
-
