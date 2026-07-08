@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bis-notes"
+version = "0.1.0"
+description = "Beginner-friendly tools and examples for bio and brain engineering study notes."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "hohyeon Kang" }
+]
+keywords = [
+  "bioinformatics",
+  "biology",
+  "computational-biology",
+  "education",
+  "neuroscience",
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Education",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.urls]
+Homepage = "https://github.com/rkdghgus0779-crypto/BiS"
+Issues = "https://github.com/rkdghgus0779-crypto/BiS/issues"
+
+[project.scripts]
+bis-notes = "bis_notes.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
