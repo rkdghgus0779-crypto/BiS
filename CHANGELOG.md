@@ -14,3 +14,4 @@ All notable changes to BiS will be documented in this file.
 * Contributor, conduct, and security documentation
 * Research focus, project ideas, and open-source growth documents
 * Fibrosis and immune response example note
+* JSON output support for the CLI

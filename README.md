@@ -50,6 +50,12 @@ Use the command line interface with a Markdown or text note:
 bis-notes examples/example_notes.md
 ```
 
+Export structured JSON:
+
+```bash
+bis-notes examples/example_notes.md --json
+```
+
 Use the package from Python:
 
 ```python
