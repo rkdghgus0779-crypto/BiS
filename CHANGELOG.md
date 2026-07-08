@@ -2,7 +2,7 @@
 
 All notable changes to BiS will be documented in this file.
 
-## 0.1.0 - Unreleased
+## 0.1.0 - Release draft
 
 ### Added
 
@@ -15,3 +15,9 @@ All notable changes to BiS will be documented in this file.
 * Research focus, project ideas, and open-source growth documents
 * Fibrosis and immune response example note
 * JSON output support for the CLI
+* Beginner bioinformatics glossary
+* Single-cell RNA-seq starter reading guide
+* Fibrosis and immune response case-study outline
+* AGENTS.md for AI coding agent guidance
+
+See [docs/release_notes_v0.1.0.md](docs/release_notes_v0.1.0.md) for the prepared GitHub release note.
