@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 from .summarizer import extract_keywords, summarize_note
@@ -25,17 +26,36 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print only extracted keywords",
     )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the summary and keywords as JSON",
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     note = args.note_file.read_text(encoding="utf-8")
+    summary = summarize_note(note, max_sentences=args.sentences)
     keywords = extract_keywords(note)
+
+    if args.json:
+        print(
+            json.dumps(
+                {
+                    "summary": summary,
+                    "keywords": keywords,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 0
 
     if not args.keywords_only:
         print("Summary:")
-        print(summarize_note(note, max_sentences=args.sentences))
+        print(summary)
         print()
 
     print("Keywords:")
