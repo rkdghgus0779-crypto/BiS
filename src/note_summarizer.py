@@ -1,38 +1,4 @@
-def summarize_note(note, max_sentences=2):
-    sentences = note.split(".")
-    summary = []
-
-    for sentence in sentences:
-        sentence = sentence.strip()
-
-        if sentence != "":
-            summary.append(sentence)
-
-        if len(summary) == max_sentences:
-            break
-
-    return ". ".join(summary) + "."
-
-
-def extract_keywords(note):
-    basic_keywords = [
-        "biology",
-        "neuroscience",
-        "bioinformatics",
-        "data",
-        "machine learning",
-        "brain",
-        "computational biology"
-    ]
-
-    found_keywords = []
-    lower_note = note.lower()
-
-    for keyword in basic_keywords:
-        if keyword in lower_note:
-            found_keywords.append(keyword)
-
-    return found_keywords
+from bis_notes.summarizer import extract_keywords, summarize_note
 
 
 def main():
